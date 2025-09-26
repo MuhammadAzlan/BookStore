@@ -10,7 +10,7 @@ export default function Footer() {
     <div className="mt-auto shadow-inner  ">
       <div className="footer-container mx-auto grid gap-6 max-w-6xl grid-cols-2  px-4 py-10 md:grid-cols-4 md:grid-rows-4 md:gap-x-6 md:gap-y-0 md:px-8 lg:gap-x-8 lg:gap-y-2">
         <div className="bookstore-desc col-span-2 md:row-span-3">
-          <h2 className="my-2 font-main text-xl font-semibold">Book Odyssey</h2>
+          <h2 className="my-2 font-main text-xl font-semibold">LitHaven</h2>
           <div className="text-sm">
             <p className="my-1 opacity-80 font-MyFont">
               We are an online bookstore that offers a wide selection of books
@@ -70,67 +70,29 @@ export default function Footer() {
               href="mailto:mayankkush0842@gmail.com"
               className="text-link mt-1 block font-MyFont underline decoration-dashed underline-offset-2 hover:decoration-solid "
             >
-              mayankkush0842@gmail <br className='flex md:hidden'></br>.com
+              yousufazlan7@gmail.com <br className='flex md:hidden'></br>.com
             </Link>
           </p>
           <p className="mb-3 text-sm font-MyFont">
             Phone:
             <Link
-              href="tel:+919023373685"
+              href="tel:+918792435067"
               className="text-link mt-1 block font-MyFont underline decoration-dashed underline-offset-2 hover:decoration-solid "
             >
-              +919023373686
+              8792435067
             </Link>
           </p>
           <p className="mb-3 text-sm font-MyFont">
             Address:
             <span className="mt-1 block font-MyFont">
-              Ahmedabad, Gujarat, INDIA
+              Banglore, karnataka, INDIA
             </span>
           </p>
         </div>
 
-        <div className="social-group col-span-2  md:row-span-1 md:self-center">
-          <div className="flex flex-row gap-x-8 mt-3 justify-center md:justify-start opacity-80 !stroke-current stroke-2 ">
-            {" "}
-            <Link href="https://www.facebook.com/">
-              {" "}
-              <FiFacebook className="icon-bottom " />{" "}
-            </Link>
-            <Link href="https://www.instagram.com/_mayank._k___/">
-              {" "}
-              <SlSocialInstagram className="icon-bottom" />{" "}
-            </Link>
-            <Link href="https://t.me/+919023373686">
-              {" "}
-              <PiTelegramLogo className="icon-bottom" />{" "}
-            </Link>
-            <Link href="mailto:mayankkush0842@gmail.com">
-              {" "}
-              <IoMailUnreadOutline className="icon-bottom" />
-            </Link>
-          </div>
-        </div>
+        
       </div>
-      <div className="copyright-notice-container w-full  p-1 bg-textgray">
-        <div
-          className="copyright-notice font-MyFont mx-auto flex max-w-6xl flex-col items-center py-1 px-4 text-primary md:flex-row 
-           md:justify-between md:px-8"
-        >
-          <span>© Copyright Next Bookstore</span>
-          <span>
-            Crafted by
-            <Link
-              className="underline decoration-dashed underline-offset-2 hover:decoration-solid"
-              href="https://lordmashh.github.io/Portfolio_mayank/"
-            >
-              {" "}
-              Mayank kushwaha
-            </Link>
-            .
-          </span>
-        </div>
-      </div>
+      
     </div>
   );
 }

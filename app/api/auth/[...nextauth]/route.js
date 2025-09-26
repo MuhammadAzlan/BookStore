@@ -1,35 +1,40 @@
-import { connectMongoDB } from "@/lib/mongodb";
-import User from "@/models/user";
-import NextAuth from "next-auth/next";
+import NextAuth from "next-auth";
 import CredentialsProvider from "next-auth/providers/credentials";
 import bcrypt from "bcryptjs";
+import { connectMongoDB } from "@/lib/mongodb";
 
-export const authOptions = {
+const handler = NextAuth({
   providers: [
     CredentialsProvider({
-      name: "credentials",
-      credentials: {},
-
+      name: "Credentials",
+      credentials: {
+        email: { label: "Email", type: "text" },
+        password: { label: "Password", type: "password" },
+      },
       async authorize(credentials) {
-        const { email, password } = credentials;
+        // 1. connect DB
+        await connectMongoDB()
 
-        try {
-          await connectMongoDB();
-          const user = await User.findOne({ email });
+        // 2. find user
+        const user = await User.findOne({ email: credentials.email })
+        if (!user) {
+          throw new Error("No user found with this email")
+        }
 
-          if (!user) {
-            return null;
-          }
+        // 3. compare password
+        const isPasswordValid = await bcrypt.compare(
+          credentials.password,
+          user.password
+        )
+        if (!isPasswordValid) {
+          throw new Error("Invalid password")
+        }
 
-          const passwordsMatch = await bcrypt.compare(password, user.password);
-
-          if (!passwordsMatch) {
-            return null;
-          }
-
-          return user;
-        } catch (error) {
-          console.log("Error: ", error);
+        // 4. return safe user object
+        return {
+          id: user._id.toString(),
+          name: user.name,
+          email: user.email,
         }
       },
     }),
@@ -37,12 +42,7 @@ export const authOptions = {
   session: {
     strategy: "jwt",
   },
+  secret: process.env.NEXTAUTH_SECRET,
+})
 
-  pages: {
-    signIn: "/Login",
-  },
-};
-
-const handler = NextAuth(authOptions);
-
-export { handler as GET, handler as POST };
+export { handler as GET, handler as POST }
