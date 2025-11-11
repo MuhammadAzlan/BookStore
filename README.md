@@ -21,18 +21,6 @@ Node.js
 npm
 MongoDB
 
-### Getting Started
-Clone the repository:
-bash
-Copy code
-
-git clone [https://github.com/LordMashh/Bookstore-Next.git](https://github.com/LordMashh/Bookstore-Next.git)
-
-Change into the project directory:
-bash,
-Copy code,
-cd e-commerce-bookstore,
-
 Install dependencies:
 bash,
 Copy code,
