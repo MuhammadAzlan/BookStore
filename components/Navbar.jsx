@@ -71,14 +71,14 @@ export default function Navbar() {
             <BiSearch className="mt-1 icon-top mr-3" />
             Search
           </Link>
-          <Link
+          {/*<Link
             href="/Wishlist"
             className="hover:opacity-95 opacity-70 relative flex flex-row link link-underline link-underline-black"
           >
             <FaRegHeart className="mt-1 icon-top mr-3" />
             Wishlist
-          </Link>
-          <Link
+          </Link>*/}
+          {/*<Link
             href="/Cart"
             className="hover:opacity-95 opacity-70  relative flex flex-row  link link-underline link-underline-black"
           >
@@ -91,21 +91,21 @@ export default function Navbar() {
             </span>
             <AiOutlineShoppingCart className="mt-1  icon-top mr-3" />
             Cart
-          </Link>
-          <Link
+          </Link>*/}
+          {/*<Link
             href="/Dashboard"
             className="hover:opacity-95 opacity-70 flex flex-row link link-underline link-underline-black"
           >
             <AiOutlineUser className="mt-1 icon-top mr-3" />
             Dashboard
-          </Link>
-          <Link
+          </Link>*/}
+         {/* <Link
             href="/Login"
             className="hover:opacity-95 opacity-70 flex flex-row link link-underline link-underline-black"
           >
             <CgLogIn className="mt-1 icon-top mr-3" />
             Login
-          </Link>
+          </Link>*/}
         </div>
       </div>
       {/*============================================================================= */}

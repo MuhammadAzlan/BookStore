@@ -28,7 +28,7 @@
     "mongoose": "^7.8.7",
     "nanoid": "^5.0.1",
     "next": "^15.5.2",
-    "next-auth": "^4.23.2",
+    "next-auth": "^4.24.13",
     "nookies": "^2.5.2",
     "postcss": "^8.4.29",
     "razorpay": "^2.9.2",
